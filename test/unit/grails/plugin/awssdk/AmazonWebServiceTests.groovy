@@ -131,26 +131,18 @@ class AmazonWebServiceTests {
         def amazonWebService = getServiceWithCredentials()
 
         assert amazonWebService.getCloudFrontAsync().class == AmazonCloudFrontAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getCloudFrontAsync('eu-west-1')
-        }
+        assert amazonWebService.getCloudFrontAsync('eu-west-1').class == AmazonCloudFrontAsyncClient
         assert amazonWebService.getCloudFront().class == AmazonCloudFrontClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getCloudFront('eu-west-1')
-        }
+        assert amazonWebService.getCloudFront('eu-west-1').class == AmazonCloudFrontClient
     }
 
     void testCloudFrontClientWithoutCredentials() {
         def amazonWebService = getServiceWithoutCredentials()
 
         assert amazonWebService.getCloudFrontAsync().class == AmazonCloudFrontAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getCloudFrontAsync('eu-west-1')
-        }
+        assert amazonWebService.getCloudFrontAsync('eu-west-1').class == AmazonCloudFrontAsyncClient
         assert amazonWebService.getCloudFront().class == AmazonCloudFrontClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getCloudFront('eu-west-1')
-        }
+        assert amazonWebService.getCloudFront('eu-west-1').class == AmazonCloudFrontClient
     }
 
     void testCloudSearchClientWithCredentials() {
@@ -337,78 +329,54 @@ class AmazonWebServiceTests {
         def amazonWebService = getServiceWithCredentials()
 
         assert amazonWebService.getIamAsync().class == AmazonIdentityManagementAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getIamAsync('eu-west-1')
-        }
+        assert amazonWebService.getIamAsync('eu-west-1').class == AmazonIdentityManagementAsyncClient
         assert amazonWebService.getIam().class == AmazonIdentityManagementClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getIam('eu-west-1')
-        }
+        assert amazonWebService.getIam('eu-west-1').class == AmazonIdentityManagementClient
     }
 
     void testIamClientWithoutCredentials() {
         def amazonWebService = getServiceWithoutCredentials()
 
         assert amazonWebService.getIamAsync().class == AmazonIdentityManagementAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getIamAsync('eu-west-1')
-        }
+        assert amazonWebService.getIamAsync('eu-west-1').class == AmazonIdentityManagementAsyncClient
         assert amazonWebService.getIam().class == AmazonIdentityManagementClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getIam('eu-west-1')
-        }
+        assert amazonWebService.getIam('eu-west-1').class == AmazonIdentityManagementClient
     }
 
     void testImportExportClientWithCredentials() {
         def amazonWebService = getServiceWithCredentials()
 
         assert amazonWebService.getImportExportAsync().class == AmazonImportExportAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getImportExportAsync('eu-west-1')
-        }
+        assert amazonWebService.getImportExportAsync('eu-west-1').class == AmazonImportExportAsyncClient
         assert amazonWebService.getImportExport().class == AmazonImportExportClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getImportExport('eu-west-1')
-        }
+        assert amazonWebService.getImportExport('eu-west-1').class == AmazonImportExportClient
     }
 
     void testImportExportClientWithoutCredentials() {
         def amazonWebService = getServiceWithoutCredentials()
 
         assert amazonWebService.getImportExportAsync().class == AmazonImportExportAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getImportExportAsync('eu-west-1')
-        }
+        assert amazonWebService.getImportExportAsync('eu-west-1').class == AmazonImportExportAsyncClient
         assert amazonWebService.getImportExport().class == AmazonImportExportClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getImportExport('eu-west-1')
-        }
+        assert amazonWebService.getImportExport('eu-west-1').class == AmazonImportExportClient
     }
 
     void testOpsWorksAsyncWithCredentials() {
         def amazonWebService = getServiceWithCredentials()
 
         assert amazonWebService.getOpsWorksAsync().class == AWSOpsWorksAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getOpsWorksAsync('eu-west-1')
-        }
+        assert amazonWebService.getOpsWorksAsync('eu-west-1').class == AWSOpsWorksAsyncClient
         assert amazonWebService.getOpsWorks().class == AWSOpsWorksClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getOpsWorks('eu-west-1')
-        }
+        assert amazonWebService.getOpsWorks('eu-west-1').class == AWSOpsWorksClient
     }
 
     void testOpsWorksAsyncWithoutCredentials() {
         def amazonWebService = getServiceWithoutCredentials()
 
         assert amazonWebService.getOpsWorksAsync().class == AWSOpsWorksAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getOpsWorksAsync('eu-west-1')
-        }
+        assert amazonWebService.getOpsWorksAsync('eu-west-1').class == AWSOpsWorksAsyncClient
         assert amazonWebService.getOpsWorks().class == AWSOpsWorksClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getOpsWorks('eu-west-1')
-        }
+        assert amazonWebService.getOpsWorks('eu-west-1').class == AWSOpsWorksClient
     }
 
     void testRdsClientWithCredentials() {
@@ -433,52 +401,36 @@ class AmazonWebServiceTests {
         def amazonWebService = getServiceWithCredentials()
 
         assert amazonWebService.getRedshiftAsync().class == AmazonRedshiftAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRedshiftAsync('eu-west-1')
-        }
+        assert amazonWebService.getRedshiftAsync('eu-west-1').class == AmazonRedshiftAsyncClient
         assert amazonWebService.getRedshift().class == AmazonRedshiftClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRedshift('eu-west-1')
-        }
+        assert amazonWebService.getRedshift('eu-west-1').class == AmazonRedshiftClient
     }
 
     void testRedshiftClientWithoutCredentials() {
         def amazonWebService = getServiceWithoutCredentials()
 
         assert amazonWebService.getRedshiftAsync().class == AmazonRedshiftAsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRedshiftAsync('eu-west-1')
-        }
+        assert amazonWebService.getRedshiftAsync('eu-west-1').class == AmazonRedshiftAsyncClient
         assert amazonWebService.getRedshift().class == AmazonRedshiftClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRedshift('eu-west-1')
-        }
+        assert amazonWebService.getRedshift('eu-west-1').class == AmazonRedshiftClient
     }
 
     void testRoute53ClientWithCredentials() {
         def amazonWebService = getServiceWithCredentials()
 
         assert amazonWebService.getRoute53Async().class == AmazonRoute53AsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRoute53Async('eu-west-1')
-        }
+        assert amazonWebService.getRoute53Async('eu-west-1').class == AmazonRoute53AsyncClient
         assert amazonWebService.getRoute53().class == AmazonRoute53Client
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRoute53('eu-west-1')
-        }
+        assert amazonWebService.getRoute53Async('eu-west-1').class == AmazonRoute53AsyncClient
     }
 
     void testRoute53ClientWithoutCredentials() {
         def amazonWebService = getServiceWithoutCredentials()
 
         assert amazonWebService.getRoute53Async().class == AmazonRoute53AsyncClient
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRoute53Async('eu-west-1')
-        }
+        assert amazonWebService.getRoute53Async('eu-west-1').class == AmazonRoute53AsyncClient
         assert amazonWebService.getRoute53().class == AmazonRoute53Client
-        shouldFail(MissingMethodException) {
-            amazonWebService.getRoute53('eu-west-1')
-        }
+        assert amazonWebService.getRoute53Async('eu-west-1').class == AmazonRoute53AsyncClient
     }
 
     void testS3ClientWithCredentials() {
